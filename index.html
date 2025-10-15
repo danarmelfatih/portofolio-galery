@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galery Foto</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="scroll-indicator.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- FontAwesome untuk ikon hamburger -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GALERYFOTO</div>
+
+      <!-- Tombol hamburger -->
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Navigasi -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li>
+        <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Home Section -->
+<section id="home" class="home">
+  <div class="overlay"></div>
+  <div class="home-card">
+    <h1>Capture Your Moment</h1>
+    <p>“A small space to store pieces of life.”</p>
+    <button class="btn-cv">Download CV</button>
+
+    <ul class="social-icons">
+      <li style="--clr: #25d366">
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </li>
+      <li style="--clr: #1b1e21">
+        <a href="#"><i class="fab fa-github"></i></a>
+      </li>
+      <li style="--clr: #c32aa3">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </li>
+      <li style="--clr: #1b1e21">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+    <!-- scroll-indicator -->
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
+      <p>Scroll Down</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="about-container">
+      <h2 class="about-title">ABOUT ME</h2>
+      <h3 class="about-subtitle">"The Story Behind the Lens"</h3>
+
+      <p class="about-text">
+        "Hello, I'm Danar Melfatih Kustantoro. Photography for me isn't just a hobby,
+        but a way of telling stories. Every photo I take is a piece of time that I want to preserve and share."
+      </p>
+
+      <p class="about-text">
+        For me, one picture can say more than a thousand words. Through this gallery,
+        I want to invite you to see the world from my perspective—seeing the simple beauty,
+        the small details, and the moments that are often overlooked.
+      </p>
+
+      <p class="about-text">
+        This gallery contains journeys, memories, and stories that I capture through light.
+        I hope each photo here can inspire you, inspire you, or even remind you of a precious moment in your life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+<section id="gallery" class="gallery">
+  <h2 class="gallery-title">GALERY</h2>
+
+  <div class="slider-container">
+  <div class="slide">
+    <div class="item" style="background-image: url('assets/mt-merbabu.jpg');">
+      <div class="content">
+        <div class="name">MT MERBABU</div>
+        <div class="description">
+          “Merbabu mengajarkan tenang — bahwa keindahan bukan untuk dikejar, tapi dinikmati perlahan.” <br>
+          -3.145 MDPL-
+        </div>
+        <button>See More</button>
+      </div>
+    </div>
+
+    <div class="item" style="background-image: url('assets/mt-prauu.jpeg');">
+      <div class="content">
+        <div class="name">MT PRAU</div>
+        <div class="description">
+          “Awan menari di bawah kaki, dan aku belajar, ternyata tak perlu tinggi untuk merasa cukup dekat dengan langit.” <br>
+          -2.565 MDPL-
+        </div>
+        <button>See More</button>
+      </div>
+    </div>
+
+    <div class="item" style="background-image: url('assets/sunset.jpg');">
+      <div class="content">
+        <div class="name">SUNSET</div>
+        <div class="description">
+          “Senja bukan hanya tentang warna, tapi tentang rasa yang tak bisa dijelaskan kata.”
+        </div>
+        <button>See More</button>
+      </div>
+    </div>
+
+    <div class="item" style="background-image: url('assets/sabana.jpg');">
+      <div class="content">
+        <div class="name">SABANA</div>
+        <div class="description">
+          “Langit biru dan rumput emas berpadu, seolah alam sedang tersenyum tanpa suara.”
+        </div>
+        <button>See More</button>
+      </div>
+    </div>
+
+    <div class="item" style="background-image: url('assets/cl.JPEG');">
+      <div class="content">
+        <div class="name">STAR</div>
+        <div class="description">
+          Menangkap momen spontan di jalanan dengan cerita visual yang kuat dan jujur.
+        </div>
+        <button>See More</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tombol navigasi di dalam slider -->
+  <div class="button">
+    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">CONTACT</h2>
+  <form class="contact-form" action="#" method="post">
+    <input type="text" name="name" placeholder="ENTER YOUR NAME*" required>
+    <input type="email" name="email" placeholder="ENTER YOUR EMAIL*" required>
+    <input type="tel" name="phone" placeholder="PHONE NUMBER">
+    <textarea name="message" rows="6" placeholder="YOUR MESSAGE*" required></textarea>
+    <button type="submit" class="btn-submit">SUBMIT</button>
+  </form>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <p class="footer-copy">
+    Copyright © 2025 by <span>Danar Melfatih Kustantoro</span> | All Rights Reserved.
+  </p>
+
+  <div class="footer-iconTop">
+    <a href="#home"><i class='bxr  bx-arrow-up'  ></i> </a>
+  </div>
+
+  <a href="#top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
