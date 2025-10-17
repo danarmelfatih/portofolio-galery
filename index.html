@@ -13,57 +13,41 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-<header>
-  <nav class="navbar">
-    <div class="logo">GALERYFOTO</div>
+ <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">GALERYFOTO</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li>
+        <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Tombol hamburger -->
-    <div class="menu-toggle" id="menu-toggle">
-      <i class="fas fa-bars"></i>
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="overlay"></div>
+    <div class="home-content">
+      <h1>CAPTURE YOUR MOMENT</h1>
+      <p class="date">SATURDAY | 18 OCTOBER 2025</p>
+      <p class="quote">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam itaque reiciendis provident necessitatibus! Ratione perferendis quisquam delectus quos voluptatem quasi, harum magni quidem qui vero corrupti magnam recusandae suscipit molestias.</p>
+
+      <ul class="social-icons">
+        <li style="--clr: #25d366"><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+        <li style="--clr: #1b1e21"><a href="#"><i class="fab fa-github"></i></a></li>
+        <li style="--clr: #c32aa3"><a href="#"><i class="fab fa-instagram"></i></a></li>
+        <li style="--clr: #1b1e21"><a href="#"><i class="fab fa-x-twitter"></i></a></li>
+      </ul>
     </div>
 
-    <!-- Navigasi -->
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-      <li><a href="#gallery"><i class="fas fa-image"></i> Gallery</a></li>
-      <li><a href="#contact"><i class="fas fa-phone"></i> Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- Home Section -->
-<section id="home" class="home">
-  <div class="overlay"></div>
-  <div class="home-card">
-    <h1>Capture Your Moment</h1>
-    <p>“A small space to store pieces of life.”</p>
-    <button class="btn-cv">Download CV</button>
-
-    <ul class="social-icons">
-      <li style="--clr: #25d366">
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
-      </li>
-      <li style="--clr: #1b1e21">
-        <a href="#"><i class="fab fa-github"></i></a>
-      </li>
-      <li style="--clr: #c32aa3">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li style="--clr: #1b1e21">
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-      </li>
-    </ul>
-  </div>
-</section>
-
-
-    <!-- scroll-indicator -->
+    <!-- scroll indicator -->
     <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
+      <div class="mouse"><div class="wheel"></div></div>
       <p>Scroll Down</p>
     </div>
   </section>
@@ -168,13 +152,17 @@
 <!-- CONTACT SECTION -->
 <section id="contact" class="contact-section">
   <h2 class="contact-title">CONTACT</h2>
-  <form class="contact-form" action="#" method="post">
-    <input type="text" name="name" placeholder="ENTER YOUR NAME*" required>
-    <input type="email" name="email" placeholder="ENTER YOUR EMAIL*" required>
-    <input type="tel" name="phone" placeholder="PHONE NUMBER">
-    <textarea name="message" rows="6" placeholder="YOUR MESSAGE*" required></textarea>
-    <button type="submit" class="btn-submit">SUBMIT</button>
-  </form>
+
+  <!-- Kotak blur pembungkus form -->
+  <div class="contact-blur-box">
+    <form class="contact-form" action="#" method="post">
+      <input type="text" name="name" placeholder="ENTER YOUR NAME*" required>
+      <input type="email" name="email" placeholder="ENTER YOUR EMAIL*" required>
+      <input type="tel" name="phone" placeholder="PHONE NUMBER">
+      <textarea name="message" rows="5" placeholder="YOUR MESSAGE*" required></textarea>
+      <button type="submit" class="btn-submit">SUBMIT</button>
+    </form>
+  </div>
 </section>
 
 <!-- Footer Section -->

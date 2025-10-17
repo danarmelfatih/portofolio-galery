@@ -34,7 +34,6 @@ window.addEventListener('load', adjustGalleryText);
 window.addEventListener('resize', adjustGalleryText);
 
 
-
 // === SLIDER ===
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
@@ -53,7 +52,6 @@ if (next && prev && slide) {
 }
 
 
-
 // === SCROLL INDICATOR ===
 window.addEventListener("scroll", () => {
   const indicator = document.querySelector(".scroll-indicator");
@@ -62,7 +60,6 @@ window.addEventListener("scroll", () => {
   indicator.style.opacity = window.scrollY > 50 ? "0" : "1";
   indicator.style.transition = "opacity 0.5s ease";
 });
-
 
 
 // === MENU TOGGLE (MOBILE) ===
@@ -74,7 +71,6 @@ if (menuToggle && navLinks) {
     navLinks.classList.toggle('show'); // gunakan kelas 'show' agar cocok dengan CSS kamu
   });
 }
-
 
 
 // === SMOOTH SCROLL DAN LINK AKTIF ===
@@ -119,3 +115,15 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+
+// === SCROLL INDICATOR FADE (Tambahan untuk versi baru Home) ===
+window.addEventListener("scroll", () => {
+  const indicator = document.querySelector(".scroll-indicator");
+  if (indicator) {
+    indicator.style.opacity = window.scrollY > 50 ? "0" : "1";
+    indicator.style.transition = "opacity 0.5s ease";
+  }
+});
+
+
