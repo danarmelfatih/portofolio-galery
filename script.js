@@ -71,7 +71,7 @@ const navLinks = document.getElementById('nav-links');
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('show'); // gunakan kelas 'show' agar cocok dengan CSS kamu
   });
 }
 
@@ -94,6 +94,9 @@ navItems.forEach(link => {
       // Ubah warna aktif manual saat diklik
       navItems.forEach(a => a.classList.remove('active'));
       link.classList.add('active');
+
+      // Tutup menu setelah klik (mode mobile)
+      navLinks.classList.remove('show');
     }
   });
 });
