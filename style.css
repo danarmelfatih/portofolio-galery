@@ -1,3 +1,6 @@
+/* style.css */
+
+/* ============ RESET & GLOBAL ============ */
 * {
   margin: 0;
   padding: 0;
@@ -103,12 +106,12 @@ header {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: rgba(17, 17, 17, 0.95);
+    background: rgba(123, 123, 123, 0.95);
     position: absolute;
     top: 60px;
     right: 20px;
     border-radius: 12px;
-    padding: 1rem 1.5rem;
+    padding: 3rem 7rem;
     z-index: 1000;
   }
 
@@ -248,7 +251,7 @@ header {
   opacity: 0.7;
 }
 
-/* ============ RESPONSIVE ============ */
+/* ============ RESPONSIVE HOME ============ */
 @media (max-width: 768px) {
   .home-content h1 { font-size: 2.2rem; }
   .home-content .quote { font-size: 0.95rem; }
@@ -266,7 +269,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh; /* agar blur full layar */
-  background: url('assets/latar.jpg  ') center/cover no-repeat;
+  background: url('assets/latar.jpg') center/cover no-repeat; /* Perbaikan: hapus spasi */
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -310,7 +313,6 @@ header {
   margin-bottom: 3rem;
   text-transform: uppercase;
 }
-
 
 .about-subtitle {
   font-size: 2.2rem;
@@ -359,7 +361,7 @@ header {
   z-index: 1;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE ABOUT */
 @media (max-width: 900px) {
   .about {
     justify-content: center;
@@ -386,8 +388,6 @@ header {
     font-size: 1.6rem;
   }
 }
-
-
 
 /* ================= SMOOTH SLIDER GALLERY ================= */
 .gallery {
@@ -419,7 +419,7 @@ header {
 .slider-container {
   width: 90%;
   max-width: 1000px;
-  height: 500px; 
+  height: 500px;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -521,13 +521,9 @@ header {
 }
 
 /* ================= NAVIGATION BUTTONS ================= */
-.slider-container { 
-  position: relative;
-}
-
 .button {
   position: absolute;
-  bottom: 20px; 
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -557,7 +553,7 @@ header {
   transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE GALLERY BUTTONS ===== */
 @media (max-width: 768px) {
   .button {
     bottom: 15px;
@@ -581,24 +577,6 @@ header {
     font-size: 13px;
   }
 }
-
-/* ================= FOOTER / CONTACT SECTION (opsional) ================= */
-/* .contact {
-  background: #111;
-  color: #fff;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.contact p {
-  font-size: 1.1rem;
-  color: #ccc;
-} */
 
 /* ================= CONTACT SECTION ================= */
 .contact-section {
@@ -680,7 +658,7 @@ header {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  margin-top: 1.5rem; 
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   align-self: center;
 }
@@ -750,7 +728,7 @@ header {
   box-shadow: 0 0 15px rgba(0, 51, 51, 0.5);
   transition: all 0.3s ease;
   z-index: 1000;
-} 
+}
 
 .back-to-top:hover {
   transform: translateY(-5px);
@@ -772,24 +750,29 @@ header {
   }
 }
 
-.footer-iconTop a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    padding: .8rem;
-    background: var(--main-color);
-    border-radius: .8rem;
-    transition: .5s ease;
+/* ============ MEDIA QUERY MOBILE UNTUK NAVBAR ============ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(123, 123, 123, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    border-radius: 12px;
+    padding: 3rem 7rem;
+    z-index: 1000;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
 }
-
-
-.footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var(--main-color);
-}
-
-.footer-iconTop a i {
-    font-size: 2.4rem;
-    color: var(--second-bg-color);
-}
-
-

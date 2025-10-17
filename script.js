@@ -1,7 +1,10 @@
+// script.js
+
 // === RESPONSIVE GALLERY TEXT ===
 function adjustGalleryText() {
   const title = document.querySelector('.gallery-title');
-  const contents = document.querySelectorAll('.content p, .content h3');
+  // Komentar: Tidak ada elemen .content p atau .content h3 di HTML, hanya .name, .description, button
+  // const contents = document.querySelectorAll('.content p, .content h3'); // Tidak digunakan
 
   if (!title) return;
   const width = window.innerWidth;
@@ -9,24 +12,15 @@ function adjustGalleryText() {
   if (width <= 480) {
     title.style.fontSize = "1.4rem";
     title.style.letterSpacing = "3px";
-    contents.forEach(el => {
-      el.style.fontSize = "13px";
-      el.style.lineHeight = "1.4";
-    });
+    // contents.forEach(el => { el.style.fontSize = "13px"; el.style.lineHeight = "1.4"; });
   } else if (width <= 768) {
     title.style.fontSize = "1.8rem";
     title.style.letterSpacing = "5px";
-    contents.forEach(el => {
-      el.style.fontSize = "14px";
-      el.style.lineHeight = "1.5";
-    });
+    // contents.forEach(el => { el.style.fontSize = "14px"; el.style.lineHeight = "1.5"; });
   } else {
     title.style.fontSize = "2rem";
     title.style.letterSpacing = "8px";
-    contents.forEach(el => {
-      el.style.fontSize = "15px";
-      el.style.lineHeight = "1.6";
-    });
+    // contents.forEach(el => { el.style.fontSize = "15px"; el.style.lineHeight = "1.6"; });
   }
 }
 
@@ -52,16 +46,6 @@ if (next && prev && slide) {
 }
 
 
-// === SCROLL INDICATOR ===
-window.addEventListener("scroll", () => {
-  const indicator = document.querySelector(".scroll-indicator");
-  if (!indicator) return;
-
-  indicator.style.opacity = window.scrollY > 50 ? "0" : "1";
-  indicator.style.transition = "opacity 0.5s ease";
-});
-
-
 // === MENU TOGGLE (MOBILE) ===
 const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.getElementById('nav-links');
@@ -81,8 +65,9 @@ const sections = document.querySelectorAll('section');
 navItems.forEach(link => {
   link.addEventListener('click', e => {
     if (link.getAttribute('href').startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(link.getAttribute('href'));
+      e.preventDefault(); // Tambahkan preventDefault
+      const targetId = link.getAttribute('href');
+      const target = document.querySelector(targetId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
@@ -97,13 +82,16 @@ navItems.forEach(link => {
   });
 });
 
-// Highlight aktif otomatis saat scroll
+// Highlight aktif otomatis saat scroll & scroll indicator fade
 window.addEventListener('scroll', () => {
   let current = '';
+  const scrollPos = window.scrollY + 100; // Sesuaikan offset jika perlu
+
+  // Update active link
   sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    const sectionHeight = section.clientHeight;
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+    if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
       current = section.getAttribute('id');
     }
   });
@@ -114,16 +102,11 @@ window.addEventListener('scroll', () => {
       link.classList.add('active');
     }
   });
-});
 
-
-// === SCROLL INDICATOR FADE (Tambahan untuk versi baru Home) ===
-window.addEventListener("scroll", () => {
+  // Scroll indicator fade
   const indicator = document.querySelector(".scroll-indicator");
   if (indicator) {
     indicator.style.opacity = window.scrollY > 50 ? "0" : "1";
     indicator.style.transition = "opacity 0.5s ease";
   }
 });
-
-
