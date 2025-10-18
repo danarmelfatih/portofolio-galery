@@ -1,6 +1,3 @@
-/* style.css */
-
-/* ============ RESET & GLOBAL ============ */
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +12,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-/* ============ NAVBAR ============ */
+/* navbar */
 header {
   width: 100%;
   display: flex;
@@ -87,7 +84,7 @@ header {
   color: #000000;
 }
 
-/* === FIX: Menu Toggle muncul di Android === */
+/* menu toggle */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -95,14 +92,12 @@ header {
   cursor: pointer;
   z-index: 1001;
 }
-
-/* Saat layar kecil (Android / tablet) */
+/* mobile untuk navbar */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  /* Pastikan nav-links tersembunyi saat belum ditekan */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -115,7 +110,6 @@ header {
     z-index: 1000;
   }
 
-  /* Saat toggle ditekan (pakai JS) */
   .nav-links.show {
     display: flex;
   }
@@ -125,7 +119,7 @@ header {
   }
 }
 
-/* ============ HOME SECTION ============ */
+/* home */
 .home {
   height: 100vh;
   background: url('assets/bg.jpeg') center/cover no-repeat;
@@ -173,7 +167,7 @@ header {
   margin-bottom: 2rem;
 }
 
-/* ============ SOCIAL ICONS ============ */
+/* sosial icon */
 .social-icons {
   display: flex;
   justify-content: center;
@@ -208,7 +202,7 @@ header {
   box-shadow: 0 0 0 3px var(--clr), 0 0 0 6px #fff;
 }
 
-/* ============ SCROLL INDICATOR ============ */
+/* scroll indikator */
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
@@ -251,7 +245,6 @@ header {
   opacity: 0.7;
 }
 
-/* ============ RESPONSIVE HOME ============ */
 @media (max-width: 768px) {
   .home-content h1 { font-size: 2.2rem; }
   .home-content .quote { font-size: 0.95rem; }
@@ -264,12 +257,12 @@ header {
   .scroll-indicator p { font-size: 12px; }
 }
 
-/* ================= ABOUT SECTION ================= */
+/* about */
 .about {
   position: relative;
   width: 100%;
-  height: 100vh; /* agar blur full layar */
-  background: url('assets/latar.jpg') center/cover no-repeat; /* Perbaikan: hapus spasi */
+  height: 100vh;
+  background: url('assets/latar.jpg') center/cover no-repeat; 
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
@@ -278,7 +271,6 @@ header {
   z-index: 0;
 }
 
-/* Lapisan blur kiri */
 .about-overlay {
   position: absolute;
   top: 0;
@@ -294,7 +286,6 @@ header {
   z-index: 1;
 }
 
-/* Konten dalam overlay */
 .about-content {
   position: relative;
   z-index: 2;
@@ -348,7 +339,6 @@ header {
   transform: translateY(-2px);
 }
 
-/* Efek gradasi halus antara blur dan area foto */
 .about::after {
   content: "";
   position: absolute;
@@ -361,7 +351,6 @@ header {
   z-index: 1;
 }
 
-/* RESPONSIVE ABOUT */
 @media (max-width: 900px) {
   .about {
     justify-content: center;
@@ -389,7 +378,7 @@ header {
   }
 }
 
-/* ================= SMOOTH SLIDER GALLERY ================= */
+/* slider galery */
 .gallery {
   background: #919191;
   min-height: auto;
@@ -415,7 +404,7 @@ header {
   text-transform: uppercase;
 }
 
-/* SLIDER WRAPPER */
+
 .slider-container {
   width: 90%;
   max-width: 1000px;
@@ -427,7 +416,6 @@ header {
   box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* SLIDE ITEMS */
 .slide {
   position: relative;
   width: 100%;
@@ -520,7 +508,7 @@ header {
   }
 }
 
-/* ================= NAVIGATION BUTTONS ================= */
+/* navi button */
 .button {
   position: absolute;
   bottom: 20px;
@@ -553,7 +541,6 @@ header {
   transform: scale(1.1);
 }
 
-/* ===== RESPONSIVE GALLERY BUTTONS ===== */
 @media (max-width: 768px) {
   .button {
     bottom: 15px;
@@ -578,7 +565,7 @@ header {
   }
 }
 
-/* ================= CONTACT SECTION ================= */
+/* contact section */
 .contact-section {
   background: #cbbfbf;
   color: #000;
@@ -588,7 +575,6 @@ header {
   align-items: center;
 }
 
-/* Judul */
 .contact-title {
   display: inline-block;
   border: 3px solid #000;
@@ -602,27 +588,24 @@ header {
   text-transform: uppercase;
 }
 
-/* Kotak blur di belakang form */
 .contact-blur-box {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border-radius: 20px;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
-  padding: 2rem 2.5rem; /* lebih kecil dari sebelumnya */
-  max-width: 750px;
+  padding: 2rem 2.5rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* Form di dalam blur box */
 .contact-form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.4rem; /* sedikit lebih rapat */
+  gap: 1.4rem;
 }
 
 .contact-form input,
@@ -669,7 +652,7 @@ header {
   transform: translateY(-2px);
 }
 
-/* Responsive Contact */
+
 @media (max-width: 768px) {
   .contact-section {
     padding: 5rem 1.5rem;
@@ -695,7 +678,7 @@ header {
   }
 }
 
-/* ================= FOOTER SECTION ================= */
+/* footer section */
 .footer {
   position: relative;
   background: #1e242c;
@@ -735,7 +718,7 @@ header {
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
 }
 
-/* Responsive Footer */
+
 @media (max-width: 768px) {
   .footer {
     font-size: 0.8rem;
@@ -750,7 +733,7 @@ header {
   }
 }
 
-/* ============ MEDIA QUERY MOBILE UNTUK NAVBAR ============ */
+/* quey mobila */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;

@@ -1,10 +1,5 @@
-// script.js
-
-// === RESPONSIVE GALLERY TEXT ===
 function adjustGalleryText() {
   const title = document.querySelector('.gallery-title');
-  // Komentar: Tidak ada elemen .content p atau .content h3 di HTML, hanya .name, .description, button
-  // const contents = document.querySelectorAll('.content p, .content h3'); // Tidak digunakan
 
   if (!title) return;
   const width = window.innerWidth;
@@ -12,15 +7,12 @@ function adjustGalleryText() {
   if (width <= 480) {
     title.style.fontSize = "1.4rem";
     title.style.letterSpacing = "3px";
-    // contents.forEach(el => { el.style.fontSize = "13px"; el.style.lineHeight = "1.4"; });
   } else if (width <= 768) {
     title.style.fontSize = "1.8rem";
     title.style.letterSpacing = "5px";
-    // contents.forEach(el => { el.style.fontSize = "14px"; el.style.lineHeight = "1.5"; });
   } else {
     title.style.fontSize = "2rem";
     title.style.letterSpacing = "8px";
-    // contents.forEach(el => { el.style.fontSize = "15px"; el.style.lineHeight = "1.6"; });
   }
 }
 
@@ -65,29 +57,25 @@ const sections = document.querySelectorAll('section');
 navItems.forEach(link => {
   link.addEventListener('click', e => {
     if (link.getAttribute('href').startsWith('#')) {
-      e.preventDefault(); // Tambahkan preventDefault
+      e.preventDefault();
       const targetId = link.getAttribute('href');
       const target = document.querySelector(targetId);
       if (target) {
         target.scrollIntoView({ behavior: 'smooth' });
       }
 
-      // Ubah warna aktif manual saat diklik
       navItems.forEach(a => a.classList.remove('active'));
       link.classList.add('active');
 
-      // Tutup menu setelah klik (mode mobile)
       navLinks.classList.remove('show');
     }
   });
 });
 
-// Highlight aktif otomatis saat scroll & scroll indicator fade
 window.addEventListener('scroll', () => {
   let current = '';
-  const scrollPos = window.scrollY + 100; // Sesuaikan offset jika perlu
+  const scrollPos = window.scrollY + 100;
 
-  // Update active link
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.offsetHeight;
@@ -103,7 +91,7 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  // Scroll indicator fade
+  
   const indicator = document.querySelector(".scroll-indicator");
   if (indicator) {
     indicator.style.opacity = window.scrollY > 50 ? "0" : "1";
