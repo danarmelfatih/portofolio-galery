@@ -5,11 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Galery Foto</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="scroll-indicator.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-
-  <!-- FontAwesome untuk ikon hamburger -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
@@ -85,73 +81,71 @@
   </div>
 </section>
 
-
-
   <!-- Gallery Section -->
 <section id="gallery" class="gallery">
-  <h2 class="gallery-title">GALERY</h2>
+  <h2 class="gallery-title">GALLERY</h2>
 
   <div class="slider-container">
-  <div class="slide">
-    <div class="item" style="background-image: url('assets/mt-merbabu.webp');">
-      <div class="content">
-        <div class="name">MT MERBABU</div>
-        <div class="description">
-          “Merbabu mengajarkan tenang — bahwa keindahan bukan untuk dikejar, tapi dinikmati perlahan.” <br>
-          -3.145 MDPL-
+    <div class="slide">
+      <div class="item" style="background-image: url('assets/mt-merbabu.webp');">
+        <div class="content">
+          <div class="name">MT MERBABU</div>
+          <div class="description">
+            "Merbabu mengajarkan tenang — bahwa keindahan bukan untuk dikejar, tapi dinikmati perlahan." <br>
+            -3.145 MDPL-
+          </div>
+          <button>See More</button>
         </div>
-        <button>See More</button>
+      </div>
+
+      <div class="item" style="background-image: url('assets/mt-prauu.webp');">
+        <div class="content">
+          <div class="name">MT PRAU</div>
+          <div class="description">
+            "Awan menari di bawah kaki, dan aku belajar, ternyata tak perlu tinggi untuk merasa cukup dekat dengan langit." <br>
+            -2.565 MDPL-
+          </div>
+          <button>See More</button>
+        </div>
+      </div>
+
+      <div class="item" style="background-image: url('assets/sunset.webp');">
+        <div class="content">
+          <div class="name">SUNSET</div>
+          <div class="description">
+            "Senja bukan hanya tentang warna, tapi tentang rasa yang tak bisa dijelaskan kata."
+          </div>
+          <button>See More</button>
+        </div>
+      </div>
+
+      <div class="item" style="background-image: url('assets/sabana.webp');">
+        <div class="content">
+          <div class="name">SABANA</div>
+          <div class="description">
+            "Langit biru dan rumput emas berpadu, seolah alam sedang tersenyum tanpa suara."
+          </div>
+          <button>See More</button>
+        </div>
+      </div>
+
+      <div class="item" style="background-image: url('assets/cl.webp');">
+        <div class="content">
+          <div class="name">STAR</div>
+          <div class="description">
+            Menangkap momen spontan di jalanan dengan cerita visual yang kuat dan jujur.
+          </div>
+          <button>See More</button>
+        </div>
       </div>
     </div>
 
-    <div class="item" style="background-image: url('assets/mt-prauu.webp');">
-      <div class="content">
-        <div class="name">MT PRAU</div>
-        <div class="description">
-          “Awan menari di bawah kaki, dan aku belajar, ternyata tak perlu tinggi untuk merasa cukup dekat dengan langit.” <br>
-          -2.565 MDPL-
-        </div>
-        <button>See More</button>
-      </div>
-    </div>
-
-    <div class="item" style="background-image: url('assets/sunset.webp');">
-      <div class="content">
-        <div class="name">SUNSET</div>
-        <div class="description">
-          “Senja bukan hanya tentang warna, tapi tentang rasa yang tak bisa dijelaskan kata.”
-        </div>
-        <button>See More</button>
-      </div>
-    </div>
-
-    <div class="item" style="background-image: url('assets/sabana.webp');">
-      <div class="content">
-        <div class="name">SABANA</div>
-        <div class="description">
-          “Langit biru dan rumput emas berpadu, seolah alam sedang tersenyum tanpa suara.”
-        </div>
-        <button>See More</button>
-      </div>
-    </div>
-
-    <div class="item" style="background-image: url('assets/cl.webp');">
-      <div class="content">
-        <div class="name">STAR</div>
-        <div class="description">
-          Menangkap momen spontan di jalanan dengan cerita visual yang kuat dan jujur.
-        </div>
-        <button>See More</button>
-      </div>
+    <!-- Tombol navigasi di dalam slider -->
+    <div class="button">
+      <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
   </div>
-
-  <!-- Tombol navigasi di dalam slider -->
-  <div class="button">
-    <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
-    <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
-  </div>
-</div>
 </section>
 
 <!-- CONTACT SECTION -->
@@ -175,17 +169,11 @@
   <p class="footer-copy">
     Copyright © 2025 by <span>Danar Melfatih Kustantoro</span> | All Rights Reserved.
   </p>
-
-  <div class="footer-iconTop">
-    <a href="#home"><i class='bxr  bx-arrow-up'  ></i> </a>
-  </div>
-
-  <a href="#top" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </a>
 </footer>
 
-
+<a href="#home" class="back-to-top">
+  <i class="fas fa-arrow-up"></i>
+</a>
 
   <script src="script.js"></script>
 </body>
